@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)https://appauth.demo-app.io/oauth2redirect?code=4ee8261036e22a096f6c&state=pODvP0qZlLpIsCaUYnY7hQ -->
+<html data-lt-installed="true" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>AppAuth Demo</title>
+    <link rel="stylesheet" href="./oauth2redirect_files/icon">
+    <link rel="stylesheet" href="./oauth2redirect_files/material.blue-orange.min.css">
+    <script defer="" src="./oauth2redirect_files/material.min.js.download"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            var redirectUri = "net.openid.appauthdemo://oauth2redirect";
+    
+            // copy query and fragment verbatim to the redirect uri, if they
+            // are defined
+            if (window.location.search) {
+                redirectUri += window.location.search;
+            }
+            if (window.location.hash) {
+                redirectUri += window.location.hash;
+            }
+            
+            document.getElementById('redirect-link').onclick = () => {
+                window.location.href = redirectUri;
+            };
+        });
+    </script>
+    <style>
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: sans-serif;
+        padding: 16px;
+    }
+
+    #redirect-link {
+        margin-top: 16px;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./oauth2redirect_files/appauth.svg">
+        <div>Authorization flow complete.</div>
+        <div>
+            <a href="https://com.epam.smartlockerprovisioning">click me!</a>
+        </div>
+        <button id="redirect-link" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">
+            Return to app
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 301.411px; height: 301.411px; transform: translate(-50%, -50%) translate(94px, 4px);"></span></span></button>
+    </div>
+
+
+</body></html>
