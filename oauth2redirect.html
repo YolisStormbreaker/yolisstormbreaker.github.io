@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="./oauth2redirect_files/material.blue-orange.min.css">
     <script defer="" src="./oauth2redirect_files/material.min.js.download"></script>
     <script>
-        window.location.replace("smartlocker://com.epam.smartlockerprovisioning:/oauth2redirect");
+        //window.location.replace("smartlocker://com.epam.smartlockerprovisioning:/oauth2redirect");
         window.addEventListener("DOMContentLoaded", function() {
-            var redirectUri = "com.epam.smartlockerprovisioning://oauth2redirect";
+           // var redirectUri = "com.epam.smartlockerprovisioning://oauth2redirect";
+            var redirectUri = "smartlocker://com.epam.smartlockerprovisioning:/oauth2redirect";
     
             // copy query and fragment verbatim to the redirect uri, if they
             // are defined
@@ -18,7 +19,7 @@
             if (window.location.hash) {
                 redirectUri += window.location.hash;
             }
-            
+            window.location.replace(redirectUri)
             document.getElementById('redirect-link').onclick = () => {
                 window.location.href = redirectUri;
             };
